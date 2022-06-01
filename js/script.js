@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const singleItemContainer = document.querySelector(".single-item-section");
 const options = {
   method: "GET",
   headers: {
@@ -16,21 +17,35 @@ async function data() {
     const response = await items.json();
     console.log(response);
     container.innerHTML = "";
+    singleItemContainer.innerHTML = "";
     for (let i = 0; i < response.length; i++) {
       const mainItems = response[i];
       if (i === 25) {
         break;
       }
       container.innerHTML += ` <div class="card"> 
+                              <a href="details.html?id=${mainItems.id}">
                                 <div class="details-image" 
       style="background-image: url('${mainItems.image}')"></div>
-                                <h3>${mainItems.name} (${mainItems.symbol})</h3>
-                                <h4>${mainItems.current_price} $</h4>
+                              <h3>${mainItems.name} (${mainItems.symbol})</h3>
+                                <h4>${mainItems.current_price} $</h4></div> </a
+
+      `;
+      singleItemContainer.innerHTML = ` <div class="card big">
+                                               <div class="details-image" style="background-image: url('${response[23].image}')"></div>
+                                               <h3>${response[23].name} (${response[23].symbol})</h3>
+                                               <h4>${response[23].current_price} $</h4>
 
       `;
     }
   } catch (error) {
     console.log(error);
+    container.innerHTML = displayError(
+      "An error occured while calling the API, try again later"
+    );
+    singleItemContainer.innerHTML = displayError(
+      "An error occured while calling the API, try again later"
+    );
   }
 }
 

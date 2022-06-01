@@ -6,7 +6,10 @@ color: white;
 margin: 0px;
 padding: 0px;
 }
-nav{
+
+/* nav , footer , links sections */
+nav,
+footer{
     background-color: black;
     display: flex;
     width: 100%;
@@ -15,9 +18,13 @@ nav{
     align-items: flex-end;
     justify-content: space-between;
 }
-nav a {
+nav a,
+footer a {
     padding: 20px;
     flex: 1;
+}
+footer{
+    margin-top: 30px;
 }
 a {
     color: white;
@@ -28,6 +35,7 @@ a {
     height: 100px;
     margin: 0 auto;
     transform: translatey(18px);
+    border-radius: 10%;
 }
 
 /* body headings */
@@ -45,14 +53,18 @@ h2,h3,h4,h5{
 
 /* container witch items will spawn */
 
-.container {
+.container,
+.single-item-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 15px;
     width: 90%;
     margin: 0 auto;
+}
+.big {
+     width: 90%!important;
 }
 
 .card {
@@ -66,4 +78,33 @@ h2,h3,h4,h5{
     height: 250px;
     background-repeat: no-repeat;
     background-position-x: center;
+}
+/* loader and error msg */
+.loader {
+    animation: fade 1.5s infinite;
+}
+@keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+.error {
+    border: 1px solid rgb(236, 20, 20);
+    padding: 1rem;
+    color: rgb(236, 20, 20);
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* details page */
+
+.description {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 40px;
+    font-size: 1.5rem;
+}
+
+.details-headings {
+    border: 1px solid white;
+    max-width: 50%;
+    margin: 20px auto;
 }

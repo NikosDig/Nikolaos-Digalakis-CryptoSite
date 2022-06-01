@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home || Welcome to the best crypto market</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="js/components/displayError.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -14,18 +15,32 @@
         <a href="index.html">
           <img class="logo" src="images/cryptologo.jpg" alt="logo" />
         </a>
-        <a href="">Home</a>
-        <a href="">Details</a>
-        <a href="">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="details.html">Details</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
     <main>
-      <h1>Welcome to Crypto Market</h1>
-      <h2>
-        A place to find the information about the best 25 coins in the market
-      </h2>
-      <div class="container"></div>
+      <section>
+        <h1>Welcome to Crypto Market</h1>
+        <h2>
+          A place to find the information about the best 25 coins in the market
+        </h2>
+        <div class="container">
+          <h5 class="loader">Loading items ...</h5>
+        </div>
+      </section>
+      <section>
+        <h2>Our editors favorite choise:</h2>
+        <div class="single-item-section blue">
+          <h5 class="loader">Loading items ...</h5>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <a href="index.html">Home</a>
+      <a href="details.html">Details</a>
+      <a href="contact.html">Contact</a>
+    </footer>
   </body>
 </html>
