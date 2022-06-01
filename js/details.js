@@ -25,9 +25,15 @@ async function data() {
                                 <div class="details-image" 
     style="background-image: url('${response.image.large}')"></div>
                             <div class="details-headings"> <h2>Current price : ${response.market_data.current_price.usd} $</h2></div>
-                            <div class="details-headings"> <h2>Price change 24h : ${response.market_data.market_cap_change_percentage_24h}%</h2></div>
+                            <div class="details-headings"> <h2>Price change 24h : <span class="profit">${response.market_data.market_cap_change_percentage_24h}%</span></h2></div>
                                 <div class="description"><p>${response.description.en}</div>
     `;
+    let redOrGreen = document.querySelector(".profit");
+    if (response.market_data.market_cap_change_percentage_24h < 0) {
+      redOrGreen.classList.add("red");
+    } else {
+      redOrGreen.classList.add("green");
+    }
   } catch (error) {
     console.log(error);
     detailsContainer.innerHTML = displayError(

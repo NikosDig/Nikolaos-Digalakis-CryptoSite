@@ -28,13 +28,14 @@ async function data() {
                                 <div class="details-image" 
       style="background-image: url('${mainItems.image}')"></div>
                               <h3>${mainItems.name} (${mainItems.symbol})</h3>
-                                <h4>${mainItems.current_price} $</h4></div> </a
+                                <h4>${mainItems.current_price} $</h4></a></div>
 
       `;
       singleItemContainer.innerHTML = ` <div class="card big">
-                                               <div class="details-image" style="background-image: url('${response[23].image}')"></div>
-                                               <h3>${response[23].name} (${response[23].symbol})</h3>
-                                               <h4>${response[23].current_price} $</h4>
+                                              <a href="details.html?id=${mainItems.id}">
+                                               <div class="details-image" style="background-image: url('${response[24].image}')"></div>
+                                               <h3>${response[24].name} (${response[24].symbol})</h3>
+                                               <h4>${response[24].current_price} $</h4></a></div>
 
       `;
     }
