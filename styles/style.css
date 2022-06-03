@@ -114,3 +114,9 @@ h2,h3,h4,h5{
 .green {
     color: lightgreen;
 }
+
+/* details nav hidded */
+
+.hidden {
+    display: none;
+}
