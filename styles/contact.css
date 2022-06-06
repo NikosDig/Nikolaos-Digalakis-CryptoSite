@@ -1,0 +1,40 @@
+.success{
+    color: lightgreen;
+    border: 1px solid lightgreen;
+}
+
+.msg{
+    color: red;
+    display: none;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container label{
+    font-size: 1.2rem;
+    display: block;
+    margin: 0 auto;
+}
+.form-container input {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+.cta {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: rgb(37 151 127 / 68%);
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.disabled {
+    background-color: grey;
+    opacity: 0.3;
+}
