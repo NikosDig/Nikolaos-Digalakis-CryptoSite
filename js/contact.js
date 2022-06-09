@@ -10,7 +10,7 @@ const addressMsg = document.querySelector(".address-msg");
 const button = document.querySelector("button");
 const successMsg = document.querySelector(".success");
 
-function formValidator() {
+function formValidator(event) {
   event.preventDefault();
 
   if (checkAmount(fullName.value, 1)) {
